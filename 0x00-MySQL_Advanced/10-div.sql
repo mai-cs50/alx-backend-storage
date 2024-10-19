@@ -2,7 +2,7 @@
 -- name, string (255 characters)
 -- If the table already exists, your script should not fail
 
-DELIMITER $$ ;
+DELIMITER //
 
 DROP FUNCTION IF EXISTS SafeDiv;
 CREATE FUNCTION SafeDiv(a INT, b INT)
