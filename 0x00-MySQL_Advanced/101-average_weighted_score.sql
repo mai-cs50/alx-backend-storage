@@ -1,9 +1,9 @@
 -- creates an index idx_name_first on the table names and the first letter of name.
 -- Only the first letter of name must be indexed
 
-DROP PROCEDURE IF EXISTS ComputeAverageWeightedScoreForUser;
+DROP PROCEDURE IF EXISTS ComputeAverageWeightedScoreForUsers;
 DELIMITER $$
-CREATE PROCEDURE ComputeAverageWeightedScoreForUser ()
+CREATE PROCEDURE ComputeAverageWeightedScoreForUsers()
 BEGIN
 	UPDATE users AS users,
 		(SELECT users.id, SUM(score * weight) / SUM(weight) AS weight_avg
